@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/new_css_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="minDateIn('myDateIn')">
+<!--Navigation bar-->
+<nav>
+<div class="topnav" id="myTopnav">
+	<a href="../index.html" title="Home" ><i class="fa fa-home"></i> Home</a>
+	<a class="active"  href="pages/rooms.html" title="Rooms">Rooms</a>
+	<a href="our_hotels.html" title="Our Hotels">Our Hotels</a>
+	<a href="about.html" title="About">About</a>
+	<a href="contact.html" title="Contacts">Contact</a>
+	<a onclick="toDo()" title="Search"><i class="fa fa-search"></i>Search</a>
+	<a id="bars" onclick="responsiveNav()"><i class="fa fa-bars"></i></a>
+</div>
+</nav>
+<!--Modal-->
+<div id="modal">
+	<div id="modal_content">
+		<span onclick="openClose('modal')" id="close_btn">&times;</span>
+		<h1>Hotel name</h1>
+	<div class="row">
+		<form method="POST">
+			<div class="col-6">
+				<label>Check in</label>
+				<input id="searchDateIn" type="date" name="checkInDate" onchange="minDateOut('searchDateIn','searchDateOut')" required>
+			</div>
+			<div class="col-6">
+				<label>Check out</label></br>
+				<input id="searchDateOut" type="date" name="checkOutDate">
+			</div>
+			<div class="col-6">
+				<label>Adults</label></br>
+				<input type="number" name="AdultsNumber" placeholder="1">
+			</div>
+			<div class="col-6">
+				<label>Kids</label></br>
+				<input type="number" name="KidsNumber" placeholder="0">
+			</div>
+			<div class="col-4">
+				<input type="submit" value="Search availability" onclick="alertMessage1()">
+			</div>
+		</form>
+	</div>
+	</div>
+</div>
+<section>
+<h1>Rooms</h1>
+<p>Make yourself at home is our slogan. We offer the best beds in the industry. Sleep well and rest well.</p>
+<div class="row">
+<form id="findRoom" method="POST">
+<div class="col-3">
+	<label><i class="fa fa-calendar"></i> Check in</label><br>
+	<input id="myDateIn" type="date" name="CheckInDate" onchange="minDateOut('myDateIn','myDateOut')" required></input>
+</div>
+<div class="col-3">
+	<label><i class="fa fa-calendar"></i> Check out</label><br>
+	<input id="myDateOut" type="date" name="CheckOutDate"  required></input>
+</div>
+<div class="col-2">
+	<label><i class="fa fa-male"></i> Adults</label></br>
+	<input type="number" name="AdultsNumber" placeholder="1"></input>
+</div>
+<div class="col-2">
+	<label><i class="fa fa-child"></i> Kids</label></br>
+	<input type="number" name="KidsNumber" placeholder="0"></input>
+</div>
+<div class="col-2">
+	<label><i class="fa fa-search"></i> Search</label></br>
+	<input type="submit" value="Search" onclick="alertMessage1()"></input>
+</div>
+</form>
+</div>
+<div class="row">
+<div class="col-4">
+	<img src="https://www.w3schools.com/w3images/room_single.jpg"></img>
+	<div class="room-text">
+		<h1>Single room</h1>
+		<p>From 99$</p>
+		<p>Single bed</p>
+		<p>15m<sup>2</sup></p>
+		<p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i></p>
+		<button>Choose room</button>
+	</div>
+</div>
+<div class="col-4">
+	<img src="https://www.w3schools.com/w3images/room_double.jpg">
+	<div class="room-text">
+		<h1>Double room</h1>
+		<p>From 149$</p>
+		<p>Queen-size bed</p>
+		<p>15m<sup>2</sup></p>
+		<p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i></p>
+		<button>Choose room</button>
+	</div>
+</div>
+<div class="col-4">
+	<img src="https://www.w3schools.com/w3images/room_deluxe.jpg">
+	<div class="room-text">
+		<h1>Deluxe room</h1>
+		<p>From 199$</p>
+		<p>King-size bed</p>
+		<p>15m<sup>2</sup></p>
+		<p><i class="fa fa-bath"></i> <i class="fa fa-phone"></i> <i class="fa fa-wifi"></i> <i class="fa fa-tv"></i> <i class="fa fa-glass"></i> <i class="fa fa-cutlery"></i></p>
+		<button>Choose room</button>
+	</div>
+</div>
+</div>
+</section>
+<!--Footer-->
+<footer>
+	<p>Find Us On</p>
+	<i class="fa fa-facebook-square" style="font-size:24px"></i>
+	<i class="fa fa-google-plus-square" style="font-size:24px"></i>
+	<i class="fa fa-linkedin-square" style="font-size:24px"></i>
+	<i class="fa fa-pinterest" style="font-size:24px"></i>
+	<i class="fa fa-twitter" style="font-size:24px"></i>
+	<p>Powered by <a href="#">W3.CSS</a></p>
+</footer>
+<script src="../scripts/my_script.js"></script>
+</body>
+</html>

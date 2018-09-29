@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hotel template</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../css/new_css_style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!--Navigation bar-->
+<nav>
+<div class="topnav" id="myTopnav">
+	<a href="../index.html" title="Home" ><i class="fa fa-home"></i> Home</a>
+	<a href="rooms.html" title="Rooms">Rooms</a>
+	<a href="our_hotels.html" title="Our Hotels">Our Hotels</a>
+	<a class="active" href="about.html" title="About">About</a>
+	<a href="contact.html" title="Contacts">Contact</a>
+	<a onclick="toDo()" title="Search"><i class="fa fa-search"></i>Search</a>
+	<a id="bars" onclick="responsiveNav()"><i class="fa fa-bars"></i></a>
+</div>
+</nav>
+<!--Modal-->
+<div id="modal">
+	<div id="modal_content">
+		<span onclick="openClose('modal')" id="close_btn">&times;</span>
+		<h1>Hotel name</h1>
+	<div class="row">
+		<form method="POST">
+			<div class="col-6">
+				<label>Check in</label>
+				<input id="searchDateIn" type="date" name="checkInDate" onchange="minDateOut('searchDateIn','searchDateOut')" required>
+			</div>
+			<div class="col-6">
+				<label>Check out</label></br>
+				<input id="searchDateOut" type="date" name="checkOutDate">
+			</div>
+			<div class="col-6">
+				<label>Adults</label></br>
+				<input type="number" name="AdultsNumber" placeholder="1">
+			</div>
+			<div class="col-6">
+				<label>Kids</label></br>
+				<input type="number" name="KidsNumber" placeholder="0">
+			</div>
+			<div class="col-4">
+				<input type="submit" value="Search availability" onclick="alertMessage1()">
+			</div>
+		</form>
+	</div>
+	</div>
+</div>
+<section>
+<div class="row">
+	<div class="col-4">
+		<div id="about-text">
+			<h1>About</h1>
+			<p>Our hotel is one of a kind. It is truely amazing. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+			<p>We accept: <i class="fa fa-cc-visa"></i> <i class="fa fa-cc-paypal"></i> <i class="fa fa-cc-diners-club"></i> <i class="fa fa-cc-discover"></i></p>
+		</div>
+	</div>
+	<div class="col-8">
+		<iframe id="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d9651.482889384286!2d20.908234572462653!3d44.013065358125004!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2srs!4v1517432416293" allowfullscreen></iframe>
+	</div>
+</div>
+<div class="row">
+	<div class="col-4" style="text-align:center">
+		<p><i class="fa fa-map-marker"></i> 423 Some adr, Chicago, US</p>
+	</div>
+	<div class="col-4" style="text-align:center">
+		<p><i class="fa fa-phone"></i> Phone: +00 151515</p>
+	</div>
+	<div class="col-4" style="text-align:center">
+		<p><i class="fa fa-envelope"></i> Email: mail@mail.com</p>
+	</div>
+</div>
+<p id="ondemand">On demand, we can offer playstation, babycall, children care, dog equipment, etc.</p>
+</section>
+<footer>
+	<p>Find Us On</p>
+	<i class="fa fa-facebook-square" style="font-size:24px"></i>
+	<i class="fa fa-google-plus-square" style="font-size:24px"></i>
+	<i class="fa fa-linkedin-square" style="font-size:24px"></i>
+	<i class="fa fa-pinterest" style="font-size:24px"></i>
+	<i class="fa fa-twitter" style="font-size:24px"></i>
+	<p>Powered by <a href="#">W3.CSS</a></p>
+</footer>
+<script src="../scripts/my_script.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+</body>
+</html>
