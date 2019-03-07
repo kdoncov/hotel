@@ -1,2 +1,2 @@
-Opis: Front-end aplikacija za rezervisanje smeštaja.
+Opis: Front-end aplikacije za rezervisanje smeštaja.
 Tehnologije: HTML, CSS, Javascript, JQuery, Sass
